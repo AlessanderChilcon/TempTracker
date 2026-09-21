@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TempTracker - App del Clima</title>
+    <!-- Enlazamos los estilos -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Iconos de Google Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="card-clima">
+        <div class="buscador">
+            <input type="text" id="input-ciudad" placeholder="Ingresa una ciudad..." autocomplete="off">
+            <button id="btn-buscar" onclick="obtenerClima()">
+                <span class="material-icons">search</span>
+            </button>
+        </div>
+
+        <div id="error-mensaje" class="error oculto">Ciudad no encontrada o error de conexión.</div>
+
+        <div class="datos-clima">
+            <img src="" alt="Icono clima" class="clima-icono">
+            <h1 class="temp">--°C</h1>
+            <h2 class="ciudad">Busca una ciudad</h2>
+            <p class="clima-texto">Condición actual</p>
+
+            <div class="detalles">
+                <div class="columna">
+                    <span class="material-icons">water_drop</span>
+                    <div>
+                        <p class="humedad">--%</p>
+                        <p>Humedad</p>
+                    </div>
+                </div>
+                <div class="columna">
+                    <span class="material-icons">air</span>
+                    <div>
+                        <p class="viento">-- km/h</p>
+                        <p>Viento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlazamos el script -->
+    <script src="codigo.js"></script>
+</body>
+</html>

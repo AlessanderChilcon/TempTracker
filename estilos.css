@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 3. Fondo general de la página web de un color claro y limpio */
+body {
+    background: #f1f5f9; 
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 1. Fondo de la pantalla del celular (El degradado verde-azulado con textura) */
+.card-clima {
+    background: 
+        radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(135deg, #2dd4bf, #0ea5e9, #6366f1);
+    background-size: 16px 16px, 100% 100%;
+    
+    /* Marco exterior del teléfono elegante */
+    border: 14px solid #0f172a; 
+    box-shadow: 0 0 0 4px #cbd5e1, 0 30px 60px rgba(0, 0, 0, 0.2);
+    
+    padding: 25px 20px;
+    width: 380px;
+    height: 720px;
+    border-radius: 46px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Detalle del altavoz superior del celular */
+.card-clima::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background: #0f172a;
+    border-radius: 10px;
+}
+
+.buscador {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* 2. Buscador completamente blanco (Input) */
+.buscador input {
+    flex: 1;
+    padding: 12px 18px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.buscador input::placeholder {
+    color: #94a3b8;
+}
+
+/* 2. Botón del buscador blanco con la lupa oscura */
+.buscador button {
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f172a; /* Color de la lupa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.buscador button:hover {
+    transform: scale(1.05);
+    background: #f8fafc;
+}
+
+.error {
+    background: rgba(239, 68, 68, 0.9);
+    color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.oculto {
+    display: none;
+}
+
+/* La tarjeta interna con un fondo translúcido sutil que deja ver el fondo verde-azulado del celular */
+.datos-clima {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 28px;
+    padding: 22px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.clima-icono {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2)) saturate(1.4) brightness(1.1);
+}
+
+.temp {
+    font-size: 56px;
+    font-weight: 800;
+    margin: 5px 0;
+    letter-spacing: -1px;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ciudad {
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.clima-texto {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    color: #fef08a;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.detalles {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 18px;
+    margin-top: 12px;
+}
+
+.columna {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.columna:first-child span {
+    font-size: 36px;
+    color: #e0f2fe;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.columna:last-child span {
+    font-size: 36px;
+    color: #a7f3d0;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.columna p:first-child {
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.columna p:last-child {
+    font-size: 12px;
+    color: #f1f5f9;
+    font-weight: 500;
+}
